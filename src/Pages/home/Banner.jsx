@@ -23,7 +23,9 @@ const Banner = () => {
   return (
     <div className="flex flex-col md:flex-row-reverse py-3 justify-between items-center gap-12">
       {/* Carousel */}
+      
       <div className="md:w-1/2 w-full flex items-center md:justify-end">
+      <Link to={`/allbooks`}>
         <Carousel
           showThumbs={false}
           autoPlay={true}
@@ -42,10 +44,13 @@ const Banner = () => {
             <img style={imageStyle} src={bannerImg3} alt="Banner 3" />
           </div>
         </Carousel>
+        </Link>
       </div>
 
       {/* Text Section */}
+      <Link to={`/allbooks`}>
       <div className="md:w-1/2 w-full">
+
         <h2
           style={animationStyle}
           className="md:text-3xl text-2xl font-medium mb-7 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-transparent bg-clip-text"
@@ -56,8 +61,10 @@ const Banner = () => {
           আপনার প্রিয় বই এখন এক ক্লিকে – সহজে বই কিনুন, নতুন বইয়ের কালেকশন
           আবিষ্কার করুন এবং সেরা অফারে আপনার বুকশেলফ সাজান আমাদের বুকস্টোর থেকে!
         </p>
+        
 
         {/* Button with hover and transition effects */}
+        <Link to={`/allbooks`}>
         <button
           style={{
             display: "inline-block",
@@ -75,9 +82,11 @@ const Banner = () => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <Link to={`/allbooks`}>কিনুন</Link>
+          কিনুন
         </button>
+        </Link>
       </div>
+      </Link>
       <style>
         {`
           @keyframes fadeIn {
